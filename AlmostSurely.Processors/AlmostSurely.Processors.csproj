@@ -34,8 +34,13 @@
       <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="ParallelExtensionsExtras, Version=1.2.3.0, Culture=neutral, PublicKeyToken=665f4d61f853b5a9, processorArchitecture=MSIL">
+      <HintPath>..\packages\ParallelExtensionsExtras.1.2.0.0\lib\net40\ParallelExtensionsExtras.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Event\ImageProcessed.cs" />
+    <Compile Include="Event\ImageProcessedEventArgs.cs" />
     <Compile Include="ProcessContainer.cs" />
     <Compile Include="Processor.cs" />
     <Compile Include="Interfaces\IProcessor.cs" />
@@ -53,6 +60,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AlmostSurely.Extensions\AlmostSurely.Extensions.csproj">
+      <Project>{D74541A0-6B56-473F-8617-3A6D79D75C04}</Project>
+      <Name>AlmostSurely.Extensions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AlmostSurely.Filters\AlmostSurely.Filters.csproj">
       <Project>{d02413b3-0e27-4177-bad2-d2447274381e}</Project>
       <Name>AlmostSurely.Filters</Name>

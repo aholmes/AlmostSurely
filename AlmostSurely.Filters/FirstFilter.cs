@@ -17,7 +17,7 @@ namespace AlmostSurely.Filters
 			for (var i = 0; i < layers.Count; i++)
 			{
 				var layer = layers.ElementAt(i);
-				var magickImage = new MagickImage(layer.Value.ToArray());
+				var magickImage = new MagickImage(layer.Data.ToArray());
 
 				var rand = _randDouble;
 
@@ -32,7 +32,7 @@ namespace AlmostSurely.Filters
 				if (rand > .8 && rand <= .9) magickImage.Colorize(MagickColor.FromRgb(127, 0, 0), new Percentage(75));
 				if (rand > .9)               magickImage.Colorize(MagickColor.FromRgb(0, 127, 0), new Percentage(75));
 
-				layers[layer.Key] = magickImage.ToByteArray();
+				layer.Data = magickImage.ToByteArray();
 			}
 
 			return Task.FromResult(true);

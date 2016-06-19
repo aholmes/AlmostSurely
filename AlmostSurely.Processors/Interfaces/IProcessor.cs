@@ -1,4 +1,5 @@
-﻿using AlmostSurely.Models.Interfaces;
+﻿using AlmostSurely.Processors.Event;
+using AlmostSurely.Models.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace AlmostSurely.Processors.Interfaces
 	public interface IProcessor
 	{
 		Task Process(IProcessContainer container);
+		event ImageProcessedEventHandler ImageProcessed;
 	}
 }
