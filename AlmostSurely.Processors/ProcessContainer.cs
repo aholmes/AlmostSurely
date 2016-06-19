@@ -9,6 +9,6 @@ namespace AlmostSurely.Processors
 {
 	public class ProcessContainer : IProcessContainer
 	{
-		public IDictionary<string, IEnumerable<byte>> Images { get; set; }
+		public IDictionary<string, IEnumerable<byte>> Images { get; set; } = new Dictionary<string, IEnumerable<byte>>();
 	}
 }
