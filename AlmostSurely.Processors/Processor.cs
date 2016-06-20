@@ -36,9 +36,14 @@ namespace AlmostSurely.Processors
 				{
 					canvas.InterpolationMode = InterpolationMode.HighQualityBicubic;
 
+					var rect = new Rectangle(0, 0, container.Dimensions.Width, container.Dimensions.Height);
+
 					foreach(var img in container.Images)
 					{
-						canvas.DrawImage(img.Data.ToBitmap(), 0, 0);
+						using (var bmp = img.Data.ToBitmap())
+						{
+							canvas.DrawImage(bmp, rect, rect, GraphicsUnit.Pixel);
+						}
 					}
 
 					canvas.Save();

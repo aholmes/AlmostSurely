@@ -50,6 +50,7 @@ namespace AlmostSurely.Utilities.Console
 			{
 				foreach(var imagePath in imagePaths)
 				{
+					ms.Seek(0, SeekOrigin.Begin);
 					var file = File.Open(imagePath, FileMode.Open);
 					file.CopyTo(ms);
 
