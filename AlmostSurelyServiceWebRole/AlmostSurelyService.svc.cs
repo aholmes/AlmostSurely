@@ -24,23 +24,23 @@ namespace AlmostSurelyServiceWebRole
 			_processor.ImageProcessed += Processor_ImageProcessed;
 		}
 
-		public void GetData(IProcessContainer container)
+		public void GetNewImages(IProcessContainer container)
 		{
 			_processor.Process(container);
 		}
 
-		public CompositeType GetDataUsingDataContract(CompositeType composite)
-		{
-			if (composite == null)
-			{
-				throw new ArgumentNullException("composite");
-			}
-			if (composite.BoolValue)
-			{
-				composite.StringValue += "Suffix";
-			}
-			return composite;
-		}
+//		public CompositeType GetDataUsingDataContract(CompositeType composite)
+//		{
+//			if (composite == null)
+//			{
+//				throw new ArgumentNullException("composite");
+//			}
+//			if (composite.BoolValue)
+//			{
+//				composite.StringValue += "Suffix";
+//			}
+//			return composite;
+//		}
 
 		private static void Processor_ImageProcessed(ImageProcessedEventArgs e)
 		{

@@ -1,4 +1,4 @@
 ﻿<%@ ServiceHost Language="C#" Debug="true"
-	Service="AlmostSurelyServiceWebRole.AlmostSurelyService"
+	Service="AlmostSurelyServiceWebRole.AlmostSurelyService, AlmostSurelyServiceWebRole"
 	CodeBehind="AlmostSurelyService.svc.cs"
 	Factory="Autofac.Integration.Wcf.AutofacServiceHostFactory, Autofac.Integration.Wcf" %>

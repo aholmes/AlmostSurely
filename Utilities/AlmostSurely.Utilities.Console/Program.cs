@@ -58,6 +58,27 @@ namespace AlmostSurely.Utilities.Console
 				}
 			}
 
+			//ProcessImagesInternally(options, imagePaths);
+			var client = new AlmostSurelyServiceReference.AlmostSurelyServiceClient();
+			client.GetNewImages(processContainer);
+		}
+
+		private static void ProcessImagesInternally(ArgsModel options, string[] imagePaths)
+		{
+			var processContainer = new Processors.ProcessContainer();
+
+			using (var ms = new MemoryStream())
+			{
+				foreach(var imagePath in imagePaths)
+				{
+					ms.Seek(0, SeekOrigin.Begin);
+					var file = File.Open(imagePath, FileMode.Open);
+					file.CopyTo(ms);
+
+					processContainer.Images.Add(new Image(imagePath, ms.ToArray()));
+				}
+			}
+
 			using (var scope = Container.BeginLifetimeScope())
 			{
 				var processor = scope.Resolve<IProcessor>();

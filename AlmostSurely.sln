@@ -1,15 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlmostSurely", "AlmostSurely\AlmostSurely.csproj", "{0D7D7FD2-C34C-4C78-99A0-7925836C1DE3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE3EDC1B-CF3A-421C-92FE-6EEAA73439D8} = {AE3EDC1B-CF3A-421C-92FE-6EEAA73439D8}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlmostSurely.Filters", "AlmostSurely.Filters\AlmostSurely.Filters.csproj", "{D02413B3-0E27-4177-BAD2-D2447274381E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlmostSurely.Processors", "AlmostSurely.Processors\AlmostSurely.Processors.csproj", "{F3877535-7C80-4498-9F2B-BC830BC235A1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlmostSurely.Utilities.Console", "Utilities\AlmostSurely.Utilities.Console\AlmostSurely.Utilities.Console.csproj", "{B81C14F7-7C7D-4C63-9BE1-4DF0554D73A4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE3EDC1B-CF3A-421C-92FE-6EEAA73439D8} = {AE3EDC1B-CF3A-421C-92FE-6EEAA73439D8}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilities", "Utilities", "{9449B027-06AF-4266-9D41-74AE7DAC0980}"
 EndProject
@@ -23,9 +29,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlmostSurely.Resources", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlmostSurely.Extensions", "AlmostSurely.Extensions\AlmostSurely.Extensions.csproj", "{D74541A0-6B56-473F-8617-3A6D79D75C04}"
 EndProject
-Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AlmostSurely.CloudService", "AlmostSurely.CloudService\AlmostSurely.CloudService.ccproj", "{A7050F16-464C-43FA-8D33-51D45C7C053F}"
+Project("{BB40F520-413E-3EBA-ABD4-2177801094F0}") = "AlmostSurely.CloudService", "AlmostSurely.CloudService\AlmostSurely.CloudService.ccproj", "{A7050F16-464C-43FA-8D33-51D45C7C053F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlmostSurelyServiceWebRole", "AlmostSurelyServiceWebRole\AlmostSurelyServiceWebRole.csproj", "{AE3EDC1B-CF3A-421C-92FE-6EEAA73439D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebRole", "WebRole", "{5AFDEEDD-30DD-4490-B3DA-7AB83503EE6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,5 +91,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B81C14F7-7C7D-4C63-9BE1-4DF0554D73A4} = {9449B027-06AF-4266-9D41-74AE7DAC0980}
+		{A7050F16-464C-43FA-8D33-51D45C7C053F} = {5AFDEEDD-30DD-4490-B3DA-7AB83503EE6F}
+		{AE3EDC1B-CF3A-421C-92FE-6EEAA73439D8} = {5AFDEEDD-30DD-4490-B3DA-7AB83503EE6F}
 	EndGlobalSection
 EndGlobal

@@ -9,27 +9,14 @@ using System.Web;
 
 namespace AlmostSurelyServiceWebRole
 {
-	public class AutofacRoleEntryPoint : RoleEntryPoint
+	public class ApplicationEntryPoint //: RoleEntryPoint
 	{
-		private IContainer _container;
-
-		public override void Run()
-		{
-		}
-
-		public override bool OnStart()
+		public static void AppInitialize()
 		{
 			ConfigureDependencyInjection();
-
-			return base.OnStart();
 		}
 
-		public override void OnStop()
-		{
-			base.OnStop();
-		}
-
-		private void ConfigureDependencyInjection()
+		private static void ConfigureDependencyInjection()
 		{
 			// For information on handling configuration changes
 			// see the MSDN topic at http://go.microsoft.com/fwlink/?LinkId=166357.
@@ -38,8 +25,12 @@ namespace AlmostSurelyServiceWebRole
 			builder.RegisterModule(new ProcessorModule());
 			builder.RegisterModule(new FilterModule());
 
-			_container = builder.Build();
-			AutofacHostFactory.Container = _container;
+			builder.RegisterType<AlmostSurelyService>()
+				.AsImplementedInterfaces()
+				.AsSelf();
+
+			var container = builder.Build();
+			AutofacHostFactory.Container = container;
 		}
 	}
 }
