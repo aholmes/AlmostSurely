@@ -41,6 +41,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,7 +52,9 @@
   <ItemGroup>
     <Compile Include="Event\ImageProcessed.cs" />
     <Compile Include="Event\ImageProcessedEventArgs.cs" />
+    <Compile Include="ProcessContainerBase.cs" />
     <Compile Include="ProcessContainer.cs" />
+    <Compile Include="ProcessorBase.cs" />
     <Compile Include="Processor.cs" />
     <Compile Include="Interfaces\IProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

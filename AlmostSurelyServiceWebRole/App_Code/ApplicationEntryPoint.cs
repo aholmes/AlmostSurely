@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace AlmostSurelyServiceWebRole
+namespace AlmostSurelyServiceWebRole.App_Code
 {
 	public class ApplicationEntryPoint //: RoleEntryPoint
 	{

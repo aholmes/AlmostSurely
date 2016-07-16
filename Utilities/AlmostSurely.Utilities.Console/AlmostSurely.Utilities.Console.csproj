@@ -66,11 +66,23 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Service References\AlmostSurelyServiceReference\AlmostSurely.Utilities.Console.AlmostSurelyServiceReference.GetNewImagesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\AlmostSurelyServiceReference\AlmostSurelyService.wsdl" />
     <None Include="Service References\AlmostSurelyServiceReference\AlmostSurelyService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\AlmostSurelyServiceReference\AlmostSurelyService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AlmostSurelyServiceReference\AlmostSurelyService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AlmostSurelyServiceReference\AlmostSurelyService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AlmostSurelyServiceReference\AlmostSurelyService22.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

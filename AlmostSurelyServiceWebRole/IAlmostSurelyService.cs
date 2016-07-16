@@ -6,6 +6,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using AlmostSurely.Processors;
 
 namespace AlmostSurelyServiceWebRole
 {
@@ -15,7 +16,7 @@ namespace AlmostSurelyServiceWebRole
 	{
 
 		[OperationContract]
-		void GetNewImages(IProcessContainer container);
+		void GetNewImages(ProcessContainerBase container);
 
 //		[OperationContract]
 //		CompositeType GetDataUsingDataContract(CompositeType composite);

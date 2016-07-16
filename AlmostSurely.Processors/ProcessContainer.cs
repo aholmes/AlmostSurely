@@ -11,15 +11,14 @@ using System.IO;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
 using AlmostSurely.Extensions;
+using System.Runtime.Serialization;
 
 namespace AlmostSurely.Processors
 {
-	public class ProcessContainer : IProcessContainer
+	public class ProcessContainer : ProcessContainerBase
 	{
-		public Size Dimensions { get; private set; } = new Size();
-		public ICollection<IImage> Images { get; } = new ObservableCollection<IImage>();
-
 		public ProcessContainer()
+			:base()
 		{
 			(Images as INotifyCollectionChanged).CollectionChanged += Images_CollectionChanged;
 		}

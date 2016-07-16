@@ -7,7 +7,7 @@
     <ExcludedTypes />
     <ImportXmlTypes>false</ImportXmlTypes>
     <GenerateInternalTypes>false</GenerateInternalTypes>
-    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <GenerateMessageContracts>true</GenerateMessageContracts>
     <NamespaceMappings />
     <CollectionMappings />
     <GenerateSerializableTypes>true</GenerateSerializableTypes>
@@ -22,9 +22,12 @@
     <MetadataSource Address="http://localhost:53864/AlmostSurelyService.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AlmostSurelyService.wsdl" MetadataType="Wsdl" ID="20481ea0-999e-450e-af22-cb21d6c738f3" SourceId="1" SourceUrl="http://localhost:53864/AlmostSurelyService.svc?wsdl" />
     <MetadataFile FileName="AlmostSurelyService.xsd" MetadataType="Schema" ID="73e55be5-1100-4c02-8232-78355fb8b3aa" SourceId="1" SourceUrl="http://localhost:53864/AlmostSurelyService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AlmostSurelyService2.xsd" MetadataType="Schema" ID="670a1cc5-43eb-4895-876f-42b3221be473" SourceId="1" SourceUrl="http://localhost:53864/AlmostSurelyService.svc?xsd=xsd4" />
     <MetadataFile FileName="AlmostSurelyService1.xsd" MetadataType="Schema" ID="df25c6b2-4a62-410d-b941-5e7a3ac61a3b" SourceId="1" SourceUrl="http://localhost:53864/AlmostSurelyService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AlmostSurelyService.wsdl" MetadataType="Wsdl" ID="20481ea0-999e-450e-af22-cb21d6c738f3" SourceId="1" SourceUrl="http://localhost:53864/AlmostSurelyService.svc?wsdl" />
+    <MetadataFile FileName="AlmostSurelyService21.xsd" MetadataType="Schema" ID="c36337fc-3834-4b83-9695-4cf05dd1ea0c" SourceId="1" SourceUrl="http://localhost:53864/AlmostSurelyService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AlmostSurelyService22.xsd" MetadataType="Schema" ID="3c31cd32-522f-493a-922e-7ac3862c251f" SourceId="1" SourceUrl="http://localhost:53864/AlmostSurelyService.svc?xsd=xsd3" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

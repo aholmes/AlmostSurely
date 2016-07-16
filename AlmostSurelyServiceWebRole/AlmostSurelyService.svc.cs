@@ -9,6 +9,7 @@ using System.ServiceModel.Web;
 using System.Text;
 using AlmostSurely.Processors.Event;
 using System.IO;
+using AlmostSurely.Processors;
 
 namespace AlmostSurelyServiceWebRole
 {
@@ -24,7 +25,7 @@ namespace AlmostSurelyServiceWebRole
 			_processor.ImageProcessed += Processor_ImageProcessed;
 		}
 
-		public void GetNewImages(IProcessContainer container)
+		public void GetNewImages(ProcessContainerBase container)
 		{
 			_processor.Process(container);
 		}

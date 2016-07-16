@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/AlmostSurely.Processors" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AlmostSurely.Processors" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53864/AlmostSurelyService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Drawing" />
+  <xs:import schemaLocation="http://localhost:53864/AlmostSurelyService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/AlmostSurely.Models" />
+  <xs:complexType name="ProcessContainerBase">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Drawing" minOccurs="0" name="Dimensions" type="q1:Size" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/AlmostSurely.Models" minOccurs="0" name="Images" nillable="true" type="q2:ArrayOfImageBase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProcessContainerBase" nillable="true" type="tns:ProcessContainerBase" />
+</xs:schema>

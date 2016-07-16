@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/AlmostSurely.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AlmostSurely.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfImageBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ImageBase" nillable="true" type="tns:ImageBase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfImageBase" nillable="true" type="tns:ArrayOfImageBase" />
+  <xs:complexType name="ImageBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImageBase" nillable="true" type="tns:ImageBase" />
+</xs:schema>

@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using AlmostSurely.Models.Interfaces;
 
 namespace AlmostSurely.Models
 {
-	public class Image : IImage
+	public class Image : ImageBase
 	{
-		public string Name { get; }
-		public IEnumerable<byte> Data { get; set; }
-
-		public Image(string name, IEnumerable<byte> data)
+		public Image(string name, byte[] data)
+			:base(name, data)
 		{
-			Name = name;
-			Data = data;
+
 		}
 	}
 }

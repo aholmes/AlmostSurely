@@ -14,16 +14,14 @@ using AlmostSurely.Processors.Event;
 
 namespace AlmostSurely.Processors
 {
-	public class Processor : IProcessor
+	public class Processor : ProcessorBase
 	{
-		private IEnumerable<IFilter> _filters;
-
 		public Processor(IEnumerable<Func<IFilter>> filters)
+			:base(filters)
 		{
-			_filters = filters.Select(o => o());
 		}
 
-		public async Task Process(IProcessContainer container)
+		public override async Task Process(IProcessContainer container)
 		{
 			foreach (var filter in _filters)
 			{
@@ -53,6 +51,6 @@ namespace AlmostSurely.Processors
 			//}
 		}
 
-		public event ImageProcessedEventHandler ImageProcessed;
+		public override event ImageProcessedEventHandler ImageProcessed;
 	}
 }

@@ -16,10 +16,35 @@ namespace AlmostSurely.Utilities.Console.AlmostSurelyServiceReference {
     public interface IAlmostSurelyService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAlmostSurelyService/GetNewImages", ReplyAction="http://tempuri.org/IAlmostSurelyService/GetNewImagesResponse")]
-        void GetNewImages(object container);
+        AlmostSurely.Utilities.Console.AlmostSurelyServiceReference.GetNewImagesResponse GetNewImages(AlmostSurely.Utilities.Console.AlmostSurelyServiceReference.GetNewImagesRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAlmostSurelyService/GetNewImages", ReplyAction="http://tempuri.org/IAlmostSurelyService/GetNewImagesResponse")]
-        System.Threading.Tasks.Task GetNewImagesAsync(object container);
+        System.Threading.Tasks.Task<AlmostSurely.Utilities.Console.AlmostSurelyServiceReference.GetNewImagesResponse> GetNewImagesAsync(AlmostSurely.Utilities.Console.AlmostSurelyServiceReference.GetNewImagesRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetNewImages", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetNewImagesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public AlmostSurely.Processors.ProcessContainerBase container;
+        
+        public GetNewImagesRequest() {
+        }
+        
+        public GetNewImagesRequest(AlmostSurely.Processors.ProcessContainerBase container) {
+            this.container = container;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetNewImagesResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetNewImagesResponse {
+        
+        public GetNewImagesResponse() {
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,12 +74,12 @@ namespace AlmostSurely.Utilities.Console.AlmostSurelyServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public void GetNewImages(object container) {
-            base.Channel.GetNewImages(container);
+        public AlmostSurely.Utilities.Console.AlmostSurelyServiceReference.GetNewImagesResponse GetNewImages(AlmostSurely.Utilities.Console.AlmostSurelyServiceReference.GetNewImagesRequest request) {
+            return base.Channel.GetNewImages(request);
         }
         
-        public System.Threading.Tasks.Task GetNewImagesAsync(object container) {
-            return base.Channel.GetNewImagesAsync(container);
+        public System.Threading.Tasks.Task<AlmostSurely.Utilities.Console.AlmostSurelyServiceReference.GetNewImagesResponse> GetNewImagesAsync(AlmostSurely.Utilities.Console.AlmostSurelyServiceReference.GetNewImagesRequest request) {
+            return base.Channel.GetNewImagesAsync(request);
         }
     }
 }

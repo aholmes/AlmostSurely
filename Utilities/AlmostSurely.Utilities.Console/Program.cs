@@ -11,6 +11,7 @@ using AlmostSurely.Autofac;
 using System.IO;
 using CommandLine;
 using AlmostSurely.Models;
+using AlmostSurely.Models.Interfaces;
 
 namespace AlmostSurely.Utilities.Console
 {
@@ -59,8 +60,9 @@ namespace AlmostSurely.Utilities.Console
 			}
 
 			//ProcessImagesInternally(options, imagePaths);
-			var client = new AlmostSurelyServiceReference.AlmostSurelyServiceClient();
-			client.GetNewImages(processContainer);
+			var client   = new AlmostSurelyServiceReference.AlmostSurelyServiceClient();
+			var request  = new AlmostSurelyServiceReference.GetNewImagesRequest(processContainer);
+			var response = client.GetNewImages(request);
 		}
 
 		private static void ProcessImagesInternally(ArgsModel options, string[] imagePaths)

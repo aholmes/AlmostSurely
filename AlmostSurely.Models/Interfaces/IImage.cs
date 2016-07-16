@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,6 +10,6 @@ namespace AlmostSurely.Models.Interfaces
 	public interface IImage
 	{
 		string Name { get; }
-		IEnumerable<byte> Data { get; set; }
+		byte[] Data { get; set; }
 	}
 }
