@@ -20,9 +20,9 @@ namespace AlmostSurely.Processors
 	public abstract class ProcessContainerBase : IProcessContainer
 	{
 		[DataMember]
-		public Size Dimensions { get; protected set; } = new Size();
+		public Size Dimensions { get; set; } = new Size();
 		[DataMember]
-		public Collection<ImageBase> Images { get; } = new ObservableCollection<ImageBase>();
+		public Collection<ImageBase> Images { get; set; } = new ObservableCollection<ImageBase>();
 
 		ICollection<IImage> IProcessContainer.Images => Images as ICollection<IImage>;
 	}
